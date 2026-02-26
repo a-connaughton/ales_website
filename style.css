@@ -93,34 +93,21 @@ section {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-    color: var(--white);
+    background-color: var(--light-bg);
     text-align: center;
     padding: var(--spacing-xl) var(--spacing-md);
 }
 
 .hero h1 {
     font-family: var(--font-heading);
-    font-size: 2.5rem;
+    color: var(--primary-color);
+    font-size: 2rem;
     margin-bottom: var(--spacing-sm);
 }
 
 .hero p {
-    font-size: 1.2rem;
-    opacity: 0.95;
-}
-
-/* Content Sections */
-.intro {
-    background-color: var(--light-bg);
-    text-align: center;
-}
-
-.intro h2 {
-    font-family: var(--font-heading);
-    color: var(--primary-color);
-    font-size: 2rem;
-    margin-bottom: var(--spacing-sm);
+    font-size: 1.1rem;
+    color: var(--text-color);
 }
 
 /* Highlights Grid */
@@ -136,6 +123,10 @@ section {
     padding: var(--spacing-md);
     border-radius: 8px;
     transition: transform 0.3s, box-shadow 0.3s;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    cursor: pointer;
 }
 
 .highlight-card:hover {
@@ -147,6 +138,10 @@ section {
     color: var(--secondary-color);
     font-family: var(--font-heading);
     margin-bottom: var(--spacing-sm);
+}
+
+.highlight-card p {
+    color: var(--text-color);
 }
 
 /* Footer */
