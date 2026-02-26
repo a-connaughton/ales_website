@@ -1,279 +1,182 @@
-/* About Page - Elementor-inspired Styles */
+/* About Page - Expandable Bio Cards */
 
-/* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:wght@400;600&family=Roboto:wght@400;500&display=swap');
-
-:root {
-    /* Colors */
-    --e-global-color-primary: #00819E;
-    --e-global-color-secondary: #005FAA;
-    --e-global-color-text: #000000;
-    --e-global-color-accent: #0091AC;
-    --e-global-color-75b0e63: #005FAA;
-    
-    /* Typography */
-    --e-global-typography-primary-font-family: "Inter";
-    --e-global-typography-secondary-font-family: "Inter";
-    --e-global-typography-text-font-family: "Playfair Display";
-    --e-global-typography-accent-font-family: "Roboto";
-    
-    /* Spacing */
-    --wp--preset--spacing--20: 0.44rem;
-    --wp--preset--spacing--30: 0.67rem;
-    --wp--preset--spacing--40: 1rem;
-    --wp--preset--spacing--50: 1.5rem;
-    --wp--preset--spacing--60: 2.25rem;
-    --wp--preset--spacing--70: 3.38rem;
-    --wp--preset--spacing--80: 5.06rem;
-    
-    /* Shadows */
-    --wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);
-    --wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);
-    --wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);
-    
-    /* Container */
-    --container-max-width: 1140px;
-    --content-width: min(100%, var(--container-max-width, 1140px));
-    --widgets-spacing: 20px 20px;
-    --gap: 20px;
-}
-
-*, *::after, *::before {
-    box-sizing: border-box;
-}
-
-body {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
-/* About Intro Section */
-.about-intro {
-    --padding-top: 60px;
-    --padding-bottom: 60px;
-    --padding-left: 145px;
-    --padding-right: 145px;
-    
-    max-width: 1920px;
-    margin: 0 auto;
-    text-align: center;
-    padding: var(--padding-top) var(--padding-right) var(--padding-bottom) var(--padding-left);
-    display: flex;
-    flex-direction: column;
-}
-
-.about-intro h1 {
-    font-family: var(--e-global-typography-secondary-font-family), sans-serif;
-    color: var(--e-global-color-secondary);
-    font-size: 42px;
-    font-weight: 700;
-    line-height: 42px;
-    margin-bottom: var(--wp--preset--spacing--60);
-}
-
-.about-intro p {
-    font-family: var(--e-global-typography-text-font-family), serif;
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 27px;
-    color: var(--e-global-color-text);
-}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:wght@400;600&display=swap');
 
 /* Team Section */
-.team {
-    --padding-top: 60px;
-    --padding-bottom: 60px;
-    --padding-left: 145px;
-    --padding-right: 145px;
-    
-    padding: var(--padding-top) var(--padding-right) var(--padding-bottom) var(--padding-left);
-    background-color: #f8f9fa;
-    display: flex;
-    flex-direction: column;
+.team-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
 }
 
-.team h2 {
-    text-align: center;
-    font-family: var(--e-global-typography-secondary-font-family), sans-serif;
-    color: var(--e-global-color-secondary);
+.team-section h2 {
+    font-family: 'Inter', sans-serif;
     font-size: 42px;
     font-weight: 700;
-    line-height: 42px;
-    margin-bottom: var(--wp--preset--spacing--70);
+    line-height: 1.2;
+    color: #000000;
+    margin-bottom: 20px;
 }
 
-/* Team Grid - Elementor Style */
+.section-description {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333333;
+    margin-bottom: 50px;
+    max-width: 900px;
+}
+
+/* Team Grid */
 .team-grid {
-    --columns: 5;
-    --gap: 20px;
-    
     display: grid;
-    grid-template-columns: repeat(var(--columns), 1fr);
-    gap: var(--gap);
-    max-width: var(--content-width);
-    margin: 0 auto;
-    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px 30px;
+    margin-bottom: 60px;
 }
 
-/* Team Member */
+/* Team Member Card */
 .team-member {
-    --width: 300px;
-    --padding-top: 0px;
-    --padding-bottom: 20px;
-    --padding-left: 0px;
-    --padding-right: 0px;
-    
     display: flex;
-    justify-content: center;
-    padding: var(--padding-top) var(--padding-right) var(--padding-bottom) var(--padding-left);
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
 }
 
-.headshot-container {
-    position: relative;
-    width: 100%;
-    max-width: 300px;
-    aspect-ratio: 1;
+/* Headshot */
+.headshot-wrapper {
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     overflow: hidden;
-    cursor: pointer;
-    box-shadow: var(--wp--preset--shadow--natural);
-    transition: transform 0.4s, box-shadow 0.3s, border-radius 0.3s;
-    border: 4px solid #ffffff;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
 }
 
-.headshot-container:hover {
-    transform: translateY(-8px);
-    box-shadow: var(--wp--preset--shadow--deep);
+.team-member:hover .headshot-wrapper {
+    transform: scale(1.05);
 }
 
 .headshot {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: block;
-    transition: transform 0.4s ease;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
 }
 
-.headshot-container:hover .headshot {
-    transform: scale(1.1);
+.team-member:hover .headshot {
+    filter: grayscale(0%);
 }
 
-/* Bio Overlay */
-.bio-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, rgba(0, 95, 170, 0.96) 0%, rgba(0, 145, 172, 0.96) 100%);
-    color: #ffffff;
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.headshot-container:hover .bio-overlay {
-    opacity: 1;
-}
-
-.bio-overlay h3 {
-    font-family: var(--e-global-typography-secondary-font-family), sans-serif;
-    font-size: 1.5rem;
+/* Member Info */
+.member-name {
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
     font-weight: 700;
-    margin-bottom: 0.5rem;
-    letter-spacing: -0.5px;
+    color: #000000;
+    margin: 0 0 8px 0;
 }
 
-.bio-overlay .title {
-    font-family: var(--e-global-typography-accent-font-family), sans-serif;
-    font-size: 0.95rem;
-    font-weight: 500;
-    margin-bottom: 1rem;
-    color: #ffffff;
-    opacity: 0.9;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+.member-affiliation {
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    color: #333333;
+    margin: 0 0 15px 0;
+    padding-bottom: 15px;
+    border-bottom: 3px solid #333333;
+    width: 100%;
 }
 
-.bio-overlay .bio {
-    font-family: var(--e-global-typography-text-font-family), serif;
-    font-size: 0.9rem;
-    line-height: 1.5;
-    font-weight: 400;
+/* Bio - Hidden by default */
+.member-bio {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.4s ease, opacity 0.4s ease, margin-top 0.4s ease;
+    margin-top: 0;
 }
 
-/* Responsive Design - Tablet */
-@media (max-width: 1366px) {
-    .team-grid {
-        --columns: 4;
-    }
-    
-    .about-intro, .team {
-        --padding-top: 40px;
-        --padding-bottom: 40px;
-        --padding-left: 60px;
-        --padding-right: 60px;
-    }
+.team-member:hover .member-bio {
+    max-height: 300px;
+    opacity: 1;
+    margin-top: 15px;
 }
 
+.member-bio p {
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #333333;
+    margin: 0;
+    text-align: left;
+}
+
+.member-bio a {
+    color: #0091AC;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.member-bio a:hover {
+    color: #005FAA;
+    text-decoration: underline;
+}
+
+/* Responsive Design */
 @media (max-width: 1024px) {
     .team-grid {
-        --columns: 3;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 35px 25px;
+    }
+    
+    .headshot-wrapper {
+        width: 180px;
+        height: 180px;
     }
 }
 
-/* Responsive Design - Mobile */
 @media (max-width: 768px) {
-    .team-grid {
-        --columns: 2;
-        --gap: 15px;
+    .team-section {
+        padding: 40px 20px;
     }
     
-    .about-intro, .team {
-        --padding-top: 30px;
-        --padding-bottom: 30px;
-        --padding-left: 20px;
-        --padding-right: 20px;
-    }
-    
-    .about-intro h1, .team h2 {
+    .team-section h2 {
         font-size: 32px;
-        line-height: 36px;
     }
     
-    .about-intro p {
+    .section-description {
+        font-size: 16px;
+    }
+    
+    .team-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 30px 20px;
+    }
+    
+    .headshot-wrapper {
+        width: 160px;
+        height: 160px;
+    }
+    
+    .member-name {
         font-size: 18px;
-        line-height: 24px;
     }
     
-    .headshot-container {
-        max-width: 100%;
+    .member-affiliation {
+        font-size: 14px;
     }
 }
 
 @media (max-width: 480px) {
     .team-grid {
-        --columns: 1;
+        grid-template-columns: 1fr;
+        gap: 40px;
     }
     
-    .headshot-container {
-        max-width: 280px;
-    }
-    
-    .bio-overlay {
-        padding: 1.5rem;
-    }
-    
-    .bio-overlay h3 {
-        font-size: 1.2rem;
-    }
-    
-    .bio-overlay .bio {
-        font-size: 0.85rem;
+    .headshot-wrapper {
+        width: 200px;
+        height: 200px;
     }
 }
