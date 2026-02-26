@@ -1,0 +1,128 @@
+/* About Page Specific Styles */
+
+.about-intro {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding: var(--spacing-xl) var(--spacing-md);
+}
+
+.about-intro h1 {
+    font-family: var(--font-heading);
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-md);
+}
+
+.about-intro p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-color);
+}
+
+/* Team Section */
+.team {
+    padding: var(--spacing-xl) var(--spacing-md);
+    background-color: var(--light-bg);
+}
+
+.team h2 {
+    text-align: center;
+    font-family: var(--font-heading);
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: var(--spacing-lg);
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-md);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Team Member Card */
+.team-member {
+    display: flex;
+    justify-content: center;
+}
+
+.headshot-container {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.headshot-container:hover {
+    transform: scale(1.05);
+}
+
+.headshot {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Bio Overlay - Hidden by default */
+.bio-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 51, 102, 0.95);
+    color: var(--white);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.headshot-container:hover .bio-overlay {
+    opacity: 1;
+}
+
+.bio-overlay h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    font-family: var(--font-heading);
+}
+
+.bio-overlay .title {
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-bottom: 0.75rem;
+    color: var(--accent-color);
+}
+
+.bio-overlay .bio {
+    font-size: 0.85rem;
+    line-height: 1.4;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .team-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    
+    .headshot-container {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .about-intro h1 {
+        font-size: 2rem;
+    }
+}
