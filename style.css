@@ -199,8 +199,19 @@ footer {
     background-color: var(--white);
 }
 
+.map-link {
+    display: inline-block;
+    transition: transform 0.3s, opacity 0.3s;
+    cursor: pointer;
+}
+
+.map-link:hover {
+    transform: scale(1.02);
+    opacity: 0.9;
+}
+
 .map-image {
-    max-width: 50%;
+    max-width: 70%;
     height: auto;
     display: block;
     margin: 0 auto;
@@ -215,7 +226,7 @@ footer {
     }
     
     .map-image {
-        max-width: 80%;
+        max-width: 85%;
     }
 }
 
