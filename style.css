@@ -191,3 +191,36 @@ footer {
 .logo-link .subtitle {
     margin: 0;
 }
+
+/* Map Section */
+.map-section {
+    text-align: center;
+    padding: var(--spacing-lg) var(--spacing-md);
+    background-color: var(--white);
+}
+
+.map-image {
+    max-width: 50%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Responsive adjustments for map */
+@media (max-width: 768px) {
+    .map-section {
+        padding: var(--spacing-md) var(--spacing-sm);
+    }
+    
+    .map-image {
+        max-width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    .map-image {
+        max-width: 100%;
+    }
+}
