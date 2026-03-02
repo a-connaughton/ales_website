@@ -203,3 +203,20 @@
         height: 200px;
     }
 }
+
+/* Logo link styling */
+.logo-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: opacity 0.3s;
+}
+
+.logo-link:hover {
+    opacity: 0.8;
+}
+
+.logo-link h1,
+.logo-link .subtitle {
+    margin: 0;
+}
