@@ -197,41 +197,45 @@ footer {
     text-align: center;
     padding: var(--spacing-lg) var(--spacing-md);
     background-color: var(--white);
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.map-link {
-    display: inline-block;
-    transition: transform 0.3s, opacity 0.3s;
+.map-card {
+    background-color: var(--white);
+    border: 1px solid #ddd;
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-decoration: none;
+    color: inherit;
+    display: block;
     cursor: pointer;
 }
 
-.map-link:hover {
-    transform: scale(1.02);
-    opacity: 0.9;
+.map-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+.map-card h2 {
+    color: var(--secondary-color);
+    font-family: var(--font-heading);
+    margin-bottom: var(--spacing-md);
+    font-size: 1.8rem;
 }
 
 .map-image {
-    max-width: 70%;
+    max-width: 100%;
     height: auto;
     display: block;
     margin: 0 auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 4px;
 }
 
 /* Responsive adjustments for map */
 @media (max-width: 768px) {
     .map-section {
         padding: var(--spacing-md) var(--spacing-sm);
-    }
-    
-    .map-image {
-        max-width: 85%;
-    }
-}
-
-@media (max-width: 480px) {
-    .map-image {
-        max-width: 100%;
     }
 }
