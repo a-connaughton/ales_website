@@ -184,3 +184,11 @@
         grid-template-columns: 1fr;
     }
 }
+
+.methodology-section h3 {
+    font-family: var(--font-heading);
+    color: var(--secondary-color);
+    font-size: 1.3rem;
+    margin-top: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
+}
