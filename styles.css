@@ -920,6 +920,95 @@ footer p {
 }
 
 /* ===================================
+   CONTACT PAGE
+   =================================== */
+
+.contact-section {
+    margin-bottom: var(--spacing-xl);
+}
+
+.contact-section h2 {
+    font-family: var(--font-heading);
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    margin-bottom: var(--spacing-md);
+}
+
+.contact-section p {
+    font-family: var(--font-main);
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: var(--spacing-sm);
+}
+
+.contact-card {
+    background-color: var(--light-bg);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    border-left: 4px solid var(--secondary-color);
+    margin: var(--spacing-md) 0;
+}
+
+.contact-info h3 {
+    font-family: var(--font-heading);
+    color: var(--primary-color);
+    font-size: 1.3rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.email-display {
+    font-size: 1.3rem;
+    margin: var(--spacing-sm) 0;
+}
+
+.email-display a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.email-display a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+/* Help Grid */
+.help-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-md);
+}
+
+.help-item {
+    background-color: var(--white);
+    border: 1px solid #ddd;
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.help-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+.help-item h3 {
+    font-family: var(--font-heading);
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.help-item p {
+    font-family: var(--font-main);
+    color: var(--text-color);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* ===================================
    RESPONSIVE DESIGN
    =================================== */
 
@@ -1032,6 +1121,15 @@ footer p {
     .papers-grid {
         grid-template-columns: 1fr;
     }
+
+   /* Contact Page */
+   .help-grid {
+       grid-template-columns: 1fr;
+   }
+   
+   .email-display {
+       font-size: 1.1rem;
+   }
 }
 
 @media (max-width: 480px) {
