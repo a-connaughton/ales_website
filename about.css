@@ -11,7 +11,7 @@
 
 .about-intro h1 {
     font-family: var(--font-heading);
-    font-size: 42px;
+    font-size: 2.5rem;
     font-weight: 700;
     line-height: 1.2;
     color: var(--primary-color);
@@ -20,8 +20,8 @@
 
 .about-intro p {
     font-family: var(--font-main);
-    font-size: 18px;
-    line-height: 1.6;
+    font-size: 1.2rem;
+    line-height: 1.8;
     color: var(--text-color);
     max-width: 900px;
     margin: 0 auto;
@@ -36,10 +36,10 @@
 
 .team-section h2 {
     font-family: var(--font-heading);
-    font-size: 42px;
+    font-size: 1.8rem;
     font-weight: 700;
     line-height: 1.2;
-    color: #000000;
+    color: var(--primary-color);
     margin-bottom: 50px;
     text-align: center;
 }
@@ -90,7 +90,7 @@
 /* Member Info */
 .member-name {
     font-family: var(--font-heading);
-    font-size: 20px;
+    font-size: 1.3rem;
     font-weight: 700;
     color: #000000;
     margin: 0 0 8px 0;
@@ -99,7 +99,7 @@
 
 .member-affiliation {
     font-family: var(--font-main);
-    font-size: 16px;
+    font-size: 1rem;
     color: var(--text-color);
     margin: 0 0 15px 0;
     padding-bottom: 15px;
@@ -124,8 +124,8 @@
 
 .member-bio p {
     font-family: var(--font-main);
-    font-size: 15px;
-    line-height: 1.6;
+    font-size: 0.95rem;
+    line-height: 1.8;
     color: var(--text-color);
     margin: 0;
     text-align: left;
@@ -161,11 +161,11 @@
     }
 
     .about-intro h1 {
-        font-size: 32px;
+        font-size: 2rem;
     }
     
     .about-intro p {
-        font-size: 16px;
+        font-size: 1rem;
     }
 
     .team-section {
@@ -173,7 +173,7 @@
     }
     
     .team-section h2 {
-        font-size: 32px;
+        font-size: 1.5rem;
     }
     
     .team-grid {
@@ -187,11 +187,11 @@
     }
     
     .member-name {
-        font-size: 18px;
+        font-size: 1.2rem;
     }
     
     .member-affiliation {
-        font-size: 14px;
+        font-size: 0.9rem;
     }
 }
 
