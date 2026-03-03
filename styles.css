@@ -59,10 +59,15 @@ nav {
     align-items: center;
 }
 
+.logo {
+    color: var(--white);
+}
+
 .logo h1 {
     font-family: var(--font-heading);
     font-size: 1.8rem;
     margin: 0;
+    color: var(--white);
 }
 
 .subtitle {
@@ -70,6 +75,7 @@ nav {
     font-size: 0.9rem;
     opacity: 0.9;
     margin-top: 0.25rem;
+    color: var(--white);
 }
 
 .nav-links {
@@ -93,7 +99,7 @@ nav {
 /* Logo link styling */
 .logo-link {
     text-decoration: none;
-    color: inherit;
+    color: var(--white);
     display: block;
     transition: opacity 0.3s;
 }
@@ -105,6 +111,7 @@ nav {
 .logo-link h1,
 .logo-link .subtitle {
     margin: 0;
+    color: var(--white);
 }
 
 /* ===================================
