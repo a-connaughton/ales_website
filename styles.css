@@ -223,7 +223,10 @@ h3 {
     color: #065f46;
 }
 
-/* Footer */
+/* ===================================
+   FOOTER
+   =================================== */
+
 footer {
     background-color: var(--primary-color);
     color: var(--white);
@@ -232,11 +235,59 @@ footer {
     margin-top: var(--spacing-xl);
 }
 
-footer p {
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.funding-acknowledgment {
+    margin-bottom: var(--spacing-md);
+    padding-bottom: var(--spacing-md);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.funding-acknowledgment p {
     font-family: var(--font-main);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    opacity: 0.9;
+}
+
+.funding-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.funder-logo {
+    height: 40px;
+    width: auto;
+    filter: brightness(0) invert(1); /* Makes logos white */
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+.funder-logo:hover {
+    opacity: 1;
+}
+
+.copyright {
+    font-family: var(--font-main);
+    font-size: 0.85rem;
     margin: 0;
 }
 
+@media (max-width: 768px) {
+    .funder-logo {
+        height: 35px;
+    }
+    
+    .funding-logos {
+        gap: 1.5rem;
+    }
+}
 /* ===================================
    HOME PAGE
    =================================== */
