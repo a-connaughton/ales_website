@@ -3,337 +3,364 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Research & Reports - Election Survey Project</title>
+    <title>Research & Reports - ALES</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Research & Reports</h1>
-        <p class="intro">
-            Explore our comprehensive collection of election survey reports and academic research. 
-            Use the filters below to find specific reports by year, location, election type, and partisanship.
-        </p>
-
-        <!-- Filters Section -->
-        <div class="filters-section">
-            <h2 class="filters-title">Filter Reports</h2>
-            <div class="filters-grid">
-                <div class="filter-group">
-                    <label for="year-filter">Year</label>
-                    <select id="year-filter">
-                        <option value="">All Years</option>
-                        <option value="2024">2024</option>
-                        <option value="2023">2023</option>
-                        <option value="2022">2022</option>
-                        <option value="2021">2021</option>
-                        <option value="2020">2020</option>
-                    </select>
-                </div>
-
-                <div class="filter-group">
-                    <label for="location-filter">Location</label>
-                    <select id="location-filter">
-                        <option value="">All Locations</option>
-                        <option value="california">California</option>
-                        <option value="texas">Texas</option>
-                        <option value="florida">Florida</option>
-                        <option value="new-york">New York</option>
-                        <option value="pennsylvania">Pennsylvania</option>
-                        <option value="national">National</option>
-                    </select>
-                </div>
-
-                <div class="filter-group">
-                    <label for="election-type-filter">Election Type</label>
-                    <select id="election-type-filter">
-                        <option value="">All Types</option>
-                        <option value="presidential">Presidential</option>
-                        <option value="congressional">Congressional</option>
-                        <option value="gubernatorial">Gubernatorial</option>
-                        <option value="state-legislature">State Legislature</option>
-                        <option value="local">Local</option>
-                        <option value="judicial">Judicial</option>
-                    </select>
-                </div>
-
-                <div class="filter-group">
-                    <label for="partisan-filter">Partisan Status</label>
-                    <select id="partisan-filter">
-                        <option value="">All</option>
-                        <option value="partisan">Partisan</option>
-                        <option value="nonpartisan">Nonpartisan</option>
-                    </select>
-                </div>
+    <!-- Header & Navigation -->
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html" class="logo-link">
+                    <h1>ALES</h1>
+                    <p class="subtitle">American Local Election Study</p>
+                </a>
             </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="methodology.html">Methodology</a></li>
+                <li><a href="research.html">Research</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-            <div class="filter-actions">
-                <button class="btn btn-primary" onclick="applyFilters()">Apply Filters</button>
-                <button class="btn btn-secondary" onclick="clearFilters()">Clear All</button>
-            </div>
-        </div>
-
-        <div class="results-count">
-            Showing <strong><span id="results-count">6</span></strong> reports
-        </div>
-
-        <!-- Survey Reports Section -->
-        <section class="reports-section">
-            <h2 class="section-title">Survey Reports</h2>
-            <div class="reports-list" id="reports-list">
-                
-                <!-- Report 1 -->
-                <div class="report-card" data-year="2024" data-location="california" data-type="gubernatorial" data-partisan="nonpartisan">
-                    <div class="report-info">
-                        <h3 class="report-title">
-                            <a href="#">[Report Title Placeholder]</a>
-                        </h3>
-                        <div class="report-meta">
-                            <span class="meta-item"><strong>Year:</strong> [Year]</span>
-                            <span class="meta-item"><strong>Location:</strong> [Location]</span>
-                            <span class="meta-item"><strong>Sample Size:</strong> [Number]</span>
-                        </div>
-                        <div class="report-tags">
-                            <span class="tag">[Election Type]</span>
-                            <span class="tag nonpartisan">[Partisan Status]</span>
-                        </div>
-                    </div>
-                    <div class="report-actions">
-                        <a href="#" class="download-link">View Report</a>
-                        <a href="#" class="download-link pdf">Download PDF</a>
-                    </div>
-                </div>
-
-                <!-- Report 2 -->
-                <div class="report-card" data-year="2024" data-location="national" data-type="presidential" data-partisan="partisan">
-                    <div class="report-info">
-                        <h3 class="report-title">
-                            <a href="#">[Report Title Placeholder]</a>
-                        </h3>
-                        <div class="report-meta">
-                            <span class="meta-item"><strong>Year:</strong> [Year]</span>
-                            <span class="meta-item"><strong>Location:</strong> [Location]</span>
-                            <span class="meta-item"><strong>Sample Size:</strong> [Number]</span>
-                        </div>
-                        <div class="report-tags">
-                            <span class="tag">[Election Type]</span>
-                            <span class="tag partisan">[Partisan Status]</span>
-                        </div>
-                    </div>
-                    <div class="report-actions">
-                        <a href="#" class="download-link">View Report</a>
-                        <a href="#" class="download-link pdf">Download PDF</a>
-                    </div>
-                </div>
-
-                <!-- Report 3 -->
-                <div class="report-card" data-year="2023" data-location="texas" data-type="local" data-partisan="nonpartisan">
-                    <div class="report-info">
-                        <h3 class="report-title">
-                            <a href="#">[Report Title Placeholder]</a>
-                        </h3>
-                        <div class="report-meta">
-                            <span class="meta-item"><strong>Year:</strong> [Year]</span>
-                            <span class="meta-item"><strong>Location:</strong> [Location]</span>
-                            <span class="meta-item"><strong>Sample Size:</strong> [Number]</span>
-                        </div>
-                        <div class="report-tags">
-                            <span class="tag">[Election Type]</span>
-                            <span class="tag nonpartisan">[Partisan Status]</span>
-                        </div>
-                    </div>
-                    <div class="report-actions">
-                        <a href="#" class="download-link">View Report</a>
-                        <a href="#" class="download-link pdf">Download PDF</a>
-                    </div>
-                </div>
-
-                <!-- Report 4 -->
-                <div class="report-card" data-year="2023" data-location="florida" data-type="judicial" data-partisan="nonpartisan">
-                    <div class="report-info">
-                        <h3 class="report-title">
-                            <a href="#">[Report Title Placeholder]</a>
-                        </h3>
-                        <div class="report-meta">
-                            <span class="meta-item"><strong>Year:</strong> [Year]</span>
-                            <span class="meta-item"><strong>Location:</strong> [Location]</span>
-                            <span class="meta-item"><strong>Sample Size:</strong> [Number]</span>
-                        </div>
-                        <div class="report-tags">
-                            <span class="tag">[Election Type]</span>
-                            <span class="tag nonpartisan">[Partisan Status]</span>
-                        </div>
-                    </div>
-                    <div class="report-actions">
-                        <a href="#" class="download-link">View Report</a>
-                        <a href="#" class="download-link pdf">Download PDF</a>
-                    </div>
-                </div>
-
-                <!-- Report 5 -->
-                <div class="report-card" data-year="2022" data-location="pennsylvania" data-type="congressional" data-partisan="partisan">
-                    <div class="report-info">
-                        <h3 class="report-title">
-                            <a href="#">[Report Title Placeholder]</a>
-                        </h3>
-                        <div class="report-meta">
-                            <span class="meta-item"><strong>Year:</strong> [Year]</span>
-                            <span class="meta-item"><strong>Location:</strong> [Location]</span>
-                            <span class="meta-item"><strong>Sample Size:</strong> [Number]</span>
-                        </div>
-                        <div class="report-tags">
-                            <span class="tag">[Election Type]</span>
-                            <span class="tag partisan">[Partisan Status]</span>
-                        </div>
-                    </div>
-                    <div class="report-actions">
-                        <a href="#" class="download-link">View Report</a>
-                        <a href="#" class="download-link pdf">Download PDF</a>
-                    </div>
-                </div>
-
-                <!-- Report 6 -->
-                <div class="report-card" data-year="2022" data-location="new-york" data-type="state-legislature" data-partisan="partisan">
-                    <div class="report-info">
-                        <h3 class="report-title">
-                            <a href="#">[Report Title Placeholder]</a>
-                        </h3>
-                        <div class="report-meta">
-                            <span class="meta-item"><strong>Year:</strong> [Year]</span>
-                            <span class="meta-item"><strong>Location:</strong> [Location]</span>
-                            <span class="meta-item"><strong>Sample Size:</strong> [Number]</span>
-                        </div>
-                        <div class="report-tags">
-                            <span class="tag">[Election Type]</span>
-                            <span class="tag partisan">[Partisan Status]</span>
-                        </div>
-                    </div>
-                    <div class="report-actions">
-                        <a href="#" class="download-link">View Report</a>
-                        <a href="#" class="download-link pdf">Download PDF</a>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="no-results" id="no-results" style="display: none;">
-                No reports match your current filters. Try adjusting your search criteria.
-            </div>
-        </section>
-
-        <!-- Research Papers Section -->
-        <section class="papers-section">
-            <h2 class="section-title">Published Research Using Our Data</h2>
-            <p style="margin-bottom: 1rem; color: #666;">
-                Academic papers and studies that have utilized data from our election surveys.
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            <h1>Research & Reports</h1>
+            <p class="intro">
+                Explore our comprehensive collection of election survey reports and academic research. 
+                Use the filters below to find specific reports by year, location, election type, and partisanship.
             </p>
 
-            <div class="papers-grid">
-                
-                <!-- Paper 1 -->
-                <div class="paper-card">
-                    <h3 class="paper-title">
-                        <a href="#">[Paper Title Placeholder]</a>
-                    </h3>
-                    <p class="paper-authors">[Author Names Placeholder]</p>
-                    <p class="paper-publication">[Journal Name, Volume, Year]</p>
-                    <p class="paper-abstract">
-                        [Abstract placeholder text. This would contain a brief summary of the research paper, 
-                        its methodology, key findings, and conclusions. Replace with actual abstract text.]
-                    </p>
-                    <div class="paper-links">
-                        <a href="#" class="paper-link">Read Paper</a>
-                        <a href="#" class="paper-link">Download PDF</a>
+            <!-- Filters Section -->
+            <div class="filters-section">
+                <h2 class="filters-title">Filter Reports</h2>
+                <div class="filters-grid">
+                    <div class="filter-group">
+                        <label for="year-filter">Year</label>
+                        <select id="year-filter">
+                            <option value="">All Years</option>
+                            <option value="2024">2024</option>
+                            <option value="2023">2023</option>
+                            <option value="2022">2022</option>
+                            <option value="2021">2021</option>
+                            <option value="2020">2020</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="location-filter">Location</label>
+                        <select id="location-filter">
+                            <option value="">All Locations</option>
+                            <option value="california">California</option>
+                            <option value="texas">Texas</option>
+                            <option value="florida">Florida</option>
+                            <option value="new-york">New York</option>
+                            <option value="pennsylvania">Pennsylvania</option>
+                            <option value="national">National</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="election-type-filter">Election Type</label>
+                        <select id="election-type-filter">
+                            <option value="">All Types</option>
+                            <option value="presidential">Presidential</option>
+                            <option value="congressional">Congressional</option>
+                            <option value="gubernatorial">Gubernatorial</option>
+                            <option value="state-legislature">State Legislature</option>
+                            <option value="local">Local</option>
+                            <option value="judicial">Judicial</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="partisan-filter">Partisan Status</label>
+                        <select id="partisan-filter">
+                            <option value="">All</option>
+                            <option value="partisan">Partisan</option>
+                            <option value="nonpartisan">Nonpartisan</option>
+                        </select>
                     </div>
                 </div>
 
-                <!-- Paper 2 -->
-                <div class="paper-card">
-                    <h3 class="paper-title">
-                        <a href="#">[Paper Title Placeholder]</a>
-                    </h3>
-                    <p class="paper-authors">[Author Names Placeholder]</p>
-                    <p class="paper-publication">[Journal Name, Volume, Year]</p>
-                    <p class="paper-abstract">
-                        [Abstract placeholder text. This would contain a brief summary of the research paper, 
-                        its methodology, key findings, and conclusions. Replace with actual abstract text.]
-                    </p>
-                    <div class="paper-links">
-                        <a href="#" class="paper-link">Read Paper</a>
-                        <a href="#" class="paper-link">Download PDF</a>
-                    </div>
+                <div class="filter-actions">
+                    <button class="btn btn-primary" onclick="applyFilters()">Apply Filters</button>
+                    <button class="btn btn-secondary" onclick="clearFilters()">Clear All</button>
                 </div>
-
-                <!-- Paper 3 -->
-                <div class="paper-card">
-                    <h3 class="paper-title">
-                        <a href="#">[Paper Title Placeholder]</a>
-                    </h3>
-                    <p class="paper-authors">[Author Names Placeholder]</p>
-                    <p class="paper-publication">[Journal Name, Volume, Year]</p>
-                    <p class="paper-abstract">
-                        [Abstract placeholder text. This would contain a brief summary of the research paper, 
-                        its methodology, key findings, and conclusions. Replace with actual abstract text.]
-                    </p>
-                    <div class="paper-links">
-                        <a href="#" class="paper-link">Read Paper</a>
-                        <a href="#" class="paper-link">Download PDF</a>
-                    </div>
-                </div>
-
-                <!-- Paper 4 -->
-                <div class="paper-card">
-                    <h3 class="paper-title">
-                        <a href="#">[Paper Title Placeholder]</a>
-                    </h3>
-                    <p class="paper-authors">[Author Names Placeholder]</p>
-                    <p class="paper-publication">[Journal Name, Volume, Year]</p>
-                    <p class="paper-abstract">
-                        [Abstract placeholder text. This would contain a brief summary of the research paper, 
-                        its methodology, key findings, and conclusions. Replace with actual abstract text.]
-                    </p>
-                    <div class="paper-links">
-                        <a href="#" class="paper-link">Read Paper</a>
-                        <a href="#" class="paper-link">Download PDF</a>
-                    </div>
-                </div>
-
-                <!-- Paper 5 -->
-                <div class="paper-card">
-                    <h3 class="paper-title">
-                        <a href="#">[Paper Title Placeholder]</a>
-                    </h3>
-                    <p class="paper-authors">[Author Names Placeholder]</p>
-                    <p class="paper-publication">[Journal Name, Volume, Year]</p>
-                    <p class="paper-abstract">
-                        [Abstract placeholder text. This would contain a brief summary of the research paper, 
-                        its methodology, key findings, and conclusions. Replace with actual abstract text.]
-                    </p>
-                    <div class="paper-links">
-                        <a href="#" class="paper-link">Read Paper</a>
-                        <a href="#" class="paper-link">Download PDF</a>
-                    </div>
-                </div>
-
-                <!-- Paper 6 -->
-                <div class="paper-card">
-                    <h3 class="paper-title">
-                        <a href="#">[Paper Title Placeholder]</a>
-                    </h3>
-                    <p class="paper-authors">[Author Names Placeholder]</p>
-                    <p class="paper-publication">[Journal Name, Volume, Year]</p>
-                    <p class="paper-abstract">
-                        [Abstract placeholder text. This would contain a brief summary of the research paper, 
-                        its methodology, key findings, and conclusions. Replace with actual abstract text.]
-                    </p>
-                    <div class="paper-links">
-                        <a href="#" class="paper-link">Read Paper</a>
-                        <a href="#" class="paper-link">Download PDF</a>
-                    </div>
-                </div>
-
             </div>
-        </section>
-    </div>
+
+            <div class="results-count">
+                Showing <strong><span id="results-count">6</span></strong> reports
+            </div>
+
+            <!-- Survey Reports Section -->
+            <section class="reports-section">
+                <h2 class="section-title">Survey Reports</h2>
+                <div class="reports-list" id="reports-list">
+                    
+                    <!-- Report 1 -->
+                    <div class="report-card" data-year="2024" data-location="california" data-type="gubernatorial" data-partisan="nonpartisan">
+                        <div class="report-info">
+                            <h3 class="report-title">
+                                <a href="#">[Report Title Placeholder]</a>
+                            </h3>
+                            <div class="report-meta">
+                                <span class="meta-item"><strong>Year:</strong> [Year]</span>
+                                <span class="meta-item"><strong>Location:</strong> [Location]</span>
+                                <span class="meta-item"><strong>Sample Size:</strong> [Number]</span>
+                            </div>
+                            <div class="report-tags">
+                                <span class="tag">[Election Type]</span>
+                                <span class="tag nonpartisan">[Partisan Status]</span>
+                            </div>
+                        </div>
+                        <div class="report-actions">
+                            <a href="#" class="download-link">View Report</a>
+                            <a href="#" class="download-link pdf">Download PDF</a>
+                        </div>
+                    </div>
+
+                    <!-- Report 2 -->
+                    <div class="report-card" data-year="2024" data-location="national" data-type="presidential" data-partisan="partisan">
+                        <div class="report-info">
+                            <h3 class="report-title">
+                                <a href="#">[Report Title Placeholder]</a>
+                            </h3>
+                            <div class="report-meta">
+                                <span class="meta-item"><strong>Year:</strong> [Year]</span>
+                                <span class="meta-item"><strong>Location:</strong> [Location]</span>
+                                <span class="meta-item"><strong>Sample Size:</strong> [Number]</span>
+                            </div>
+                            <div class="report-tags">
+                                <span class="tag">[Election Type]</span>
+                                <span class="tag partisan">[Partisan Status]</span>
+                            </div>
+                        </div>
+                        <div class="report-actions">
+                            <a href="#" class="download-link">View Report</a>
+                            <a href="#" class="download-link pdf">Download PDF</a>
+                        </div>
+                    </div>
+
+                    <!-- Report 3 -->
+                    <div class="report-card" data-year="2023" data-location="texas" data-type="local" data-partisan="nonpartisan">
+                        <div class="report-info">
+                            <h3 class="report-title">
+                                <a href="#">[Report Title Placeholder]</a>
+                            </h3>
+                            <div class="report-meta">
+                                <span class="meta-item"><strong>Year:</strong> [Year]</span>
+                                <span class="meta-item"><strong>Location:</strong> [Location]</span>
+                                <span class="meta-item"><strong>Sample Size:</strong> [Number]</span>
+                            </div>
+                            <div class="report-tags">
+                                <span class="tag">[Election Type]</span>
+                                <span class="tag nonpartisan">[Partisan Status]</span>
+                            </div>
+                        </div>
+                        <div class="report-actions">
+                            <a href="#" class="download-link">View Report</a>
+                            <a href="#" class="download-link pdf">Download PDF</a>
+                        </div>
+                    </div>
+
+                    <!-- Report 4 -->
+                    <div class="report-card" data-year="2023" data-location="florida" data-type="judicial" data-partisan="nonpartisan">
+                        <div class="report-info">
+                            <h3 class="report-title">
+                                <a href="#">[Report Title Placeholder]</a>
+                            </h3>
+                            <div class="report-meta">
+                                <span class="meta-item"><strong>Year:</strong> [Year]</span>
+                                <span class="meta-item"><strong>Location:</strong> [Location]</span>
+                                <span class="meta-item"><strong>Sample Size:</strong> [Number]</span>
+                            </div>
+                            <div class="report-tags">
+                                <span class="tag">[Election Type]</span>
+                                <span class="tag nonpartisan">[Partisan Status]</span>
+                            </div>
+                        </div>
+                        <div class="report-actions">
+                            <a href="#" class="download-link">View Report</a>
+                            <a href="#" class="download-link pdf">Download PDF</a>
+                        </div>
+                    </div>
+
+                    <!-- Report 5 -->
+                    <div class="report-card" data-year="2022" data-location="pennsylvania" data-type="congressional" data-partisan="partisan">
+                        <div class="report-info">
+                            <h3 class="report-title">
+                                <a href="#">[Report Title Placeholder]</a>
+                            </h3>
+                            <div class="report-meta">
+                                <span class="meta-item"><strong>Year:</strong> [Year]</span>
+                                <span class="meta-item"><strong>Location:</strong> [Location]</span>
+                                <span class="meta-item"><strong>Sample Size:</strong> [Number]</span>
+                            </div>
+                            <div class="report-tags">
+                                <span class="tag">[Election Type]</span>
+                                <span class="tag partisan">[Partisan Status]</span>
+                            </div>
+                        </div>
+                        <div class="report-actions">
+                            <a href="#" class="download-link">View Report</a>
+                            <a href="#" class="download-link pdf">Download PDF</a>
+                        </div>
+                    </div>
+
+                    <!-- Report 6 -->
+                    <div class="report-card" data-year="2022" data-location="new-york" data-type="state-legislature" data-partisan="partisan">
+                        <div class="report-info">
+                            <h3 class="report-title">
+                                <a href="#">[Report Title Placeholder]</a>
+                            </h3>
+                            <div class="report-meta">
+                                <span class="meta-item"><strong>Year:</strong> [Year]</span>
+                                <span class="meta-item"><strong>Location:</strong> [Location]</span>
+                                <span class="meta-item"><strong>Sample Size:</strong> [Number]</span>
+                            </div>
+                            <div class="report-tags">
+                                <span class="tag">[Election Type]</span>
+                                <span class="tag partisan">[Partisan Status]</span>
+                            </div>
+                        </div>
+                        <div class="report-actions">
+                            <a href="#" class="download-link">View Report</a>
+                            <a href="#" class="download-link pdf">Download PDF</a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="no-results" id="no-results" style="display: none;">
+                    No reports match your current filters. Try adjusting your search criteria.
+                </div>
+            </section>
+
+            <!-- Research Papers Section -->
+            <section class="papers-section">
+                <h2 class="section-title">Published Research Using Our Data</h2>
+                <p style="margin-bottom: 1rem; color: var(--text-color);">
+                    Academic papers and studies that have utilized data from our election surveys.
+                </p>
+
+                <div class="papers-grid">
+                    
+                    <!-- Paper 1 -->
+                    <div class="paper-card">
+                        <h3 class="paper-title">
+                            <a href="#">[Paper Title Placeholder]</a>
+                        </h3>
+                        <p class="paper-authors">[Author Names Placeholder]</p>
+                        <p class="paper-publication">[Journal Name, Volume, Year]</p>
+                        <p class="paper-abstract">
+                            [Abstract placeholder text. This would contain a brief summary of the research paper, 
+                            its methodology, key findings, and conclusions. Replace with actual abstract text.]
+                        </p>
+                        <div class="paper-links">
+                            <a href="#" class="paper-link">Read Paper</a>
+                            <a href="#" class="paper-link">Download PDF</a>
+                        </div>
+                    </div>
+
+                    <!-- Paper 2 -->
+                    <div class="paper-card">
+                        <h3 class="paper-title">
+                            <a href="#">[Paper Title Placeholder]</a>
+                        </h3>
+                        <p class="paper-authors">[Author Names Placeholder]</p>
+                        <p class="paper-publication">[Journal Name, Volume, Year]</p>
+                        <p class="paper-abstract">
+                            [Abstract placeholder text. This would contain a brief summary of the research paper, 
+                            its methodology, key findings, and conclusions. Replace with actual abstract text.]
+                        </p>
+                        <div class="paper-links">
+                            <a href="#" class="paper-link">Read Paper</a>
+                            <a href="#" class="paper-link">Download PDF</a>
+                        </div>
+                    </div>
+
+                    <!-- Paper 3 -->
+                    <div class="paper-card">
+                        <h3 class="paper-title">
+                            <a href="#">[Paper Title Placeholder]</a>
+                        </h3>
+                        <p class="paper-authors">[Author Names Placeholder]</p>
+                        <p class="paper-publication">[Journal Name, Volume, Year]</p>
+                        <p class="paper-abstract">
+                            [Abstract placeholder text. This would contain a brief summary of the research paper, 
+                            its methodology, key findings, and conclusions. Replace with actual abstract text.]
+                        </p>
+                        <div class="paper-links">
+                            <a href="#" class="paper-link">Read Paper</a>
+                            <a href="#" class="paper-link">Download PDF</a>
+                        </div>
+                    </div>
+
+                    <!-- Paper 4 -->
+                    <div class="paper-card">
+                        <h3 class="paper-title">
+                            <a href="#">[Paper Title Placeholder]</a>
+                        </h3>
+                        <p class="paper-authors">[Author Names Placeholder]</p>
+                        <p class="paper-publication">[Journal Name, Volume, Year]</p>
+                        <p class="paper-abstract">
+                            [Abstract placeholder text. This would contain a brief summary of the research paper, 
+                            its methodology, key findings, and conclusions. Replace with actual abstract text.]
+                        </p>
+                        <div class="paper-links">
+                            <a href="#" class="paper-link">Read Paper</a>
+                            <a href="#" class="paper-link">Download PDF</a>
+                        </div>
+                    </div>
+
+                    <!-- Paper 5 -->
+                    <div class="paper-card">
+                        <h3 class="paper-title">
+                            <a href="#">[Paper Title Placeholder]</a>
+                        </h3>
+                        <p class="paper-authors">[Author Names Placeholder]</p>
+                        <p class="paper-publication">[Journal Name, Volume, Year]</p>
+                        <p class="paper-abstract">
+                            [Abstract placeholder text. This would contain a brief summary of the research paper, 
+                            its methodology, key findings, and conclusions. Replace with actual abstract text.]
+                        </p>
+                        <div class="paper-links">
+                            <a href="#" class="paper-link">Read Paper</a>
+                            <a href="#" class="paper-link">Download PDF</a>
+                        </div>
+                    </div>
+
+                    <!-- Paper 6 -->
+                    <div class="paper-card">
+                        <h3 class="paper-title">
+                            <a href="#">[Paper Title Placeholder]</a>
+                        </h3>
+                        <p class="paper-authors">[Author Names Placeholder]</p>
+                        <p class="paper-publication">[Journal Name, Volume, Year]</p>
+                        <p class="paper-abstract">
+                            [Abstract placeholder text. This would contain a brief summary of the research paper, 
+                            its methodology, key findings, and conclusions. Replace with actual abstract text.]
+                        </p>
+                        <div class="paper-links">
+                            <a href="#" class="paper-link">Read Paper</a>
+                            <a href="#" class="paper-link">Download PDF</a>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 American Local Election Study. All rights reserved.</p>
+    </footer>
 
     <script src="research.js"></script>
 </body>
