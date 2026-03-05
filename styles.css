@@ -25,7 +25,7 @@
     --spacing-xl: 4rem;
     
     /* Typography */
-    --font-main: 'Gotham', 'Helvetica', sans-serif;
+    --font-main: 'Gotham', 'Neue Montreal', sans-serif;
     --font-heading: 'Gotham', sans-serif;
 }
 
@@ -60,7 +60,7 @@ nav {
 }
 
 .logo {
-    color: var(--white);
+    color: var(--accent-color);
 }
 
 .logo h1 {
