@@ -67,12 +67,12 @@ nav {
     font-family: var(--font-heading);
     font-size: 1.8rem;
     margin: 0;
-    color: var(--white);
+    color: var(--accent-color);
 }
 
 .subtitle {
     font-family: var(--font-main);
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     opacity: 0.9;
     margin-top: 0.25rem;
     color: var(--white);
