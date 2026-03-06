@@ -122,12 +122,14 @@ nav {
 /* Dropdown */
 .dropdown {
     position: relative;
+    padding-bottom: 0.5rem;
+    margin-bottom: -0.5rem;
 }
 
 .dropdown-menu {
     display: none;
     position: absolute;
-    top: calc(100% + 0.75rem);
+    top: 100%;
     left: 0;
     background-color: var(--white);
     border-radius: 4px;
@@ -135,8 +137,7 @@ nav {
     min-width: 180px;
     list-style: none;
     z-index: 200;
-    padding: 0.5rem 0;
-    /* Small triangle pointer */
+    padding: 0.75rem 0 0.5rem 0;
     border-top: 3px solid var(--secondary-color);
 }
 
