@@ -40,7 +40,7 @@ body {
    HEADER & NAVIGATION
    =================================== */
 
-header {
+body > header {
     background-color: var(--primary-color);
     color: var(--white);
     padding: 1rem 0;
@@ -82,8 +82,15 @@ nav {
 .logo-link {
     text-decoration: none;
     color: var(--white);
-    display: block;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
     transition: opacity 0.3s;
+}
+
+.nav-logo {
+    height: 3.5rem;
+    width: auto;
 }
 
 .logo-link:hover {
