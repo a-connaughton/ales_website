@@ -630,13 +630,15 @@ footer {
     text-align: left;
 }
 
-.member-bio a {
+.member-bio a,
+.about-section a {
     color: var(--secondary-color);
     text-decoration: none;
     transition: color 0.3s;
 }
 
-.member-bio a:hover {
+.member-bio a:hover,
+.about-section a:hover {
     color: var(--primary-color);
     text-decoration: underline;
 }
