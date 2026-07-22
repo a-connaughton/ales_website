@@ -1323,3 +1323,21 @@ footer {
 .help-item h3 a:hover {
     color: var(--accent-color);
 }
+
+/* Footer utility links (privacy, etc.) */
+.footer-links {
+    font-family: var(--font-main);
+    font-size: 0.8rem;
+    margin: 0.5rem 0 0;
+}
+
+.footer-links a {
+    color: inherit;
+    opacity: 0.85;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.footer-links a:hover {
+    opacity: 1;
+}
