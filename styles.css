@@ -1188,18 +1188,8 @@ footer {
 }
 
 @media (max-width: 768px) {
-    /* Navigation */
-    nav {
-        flex-direction: column;
-        gap: 1rem;
-    }
-    
-    .nav-links {
-        gap: 1rem;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    
+    /* Navigation rules for this breakpoint live in the Responsive block above. */
+
     /* Typography */
     h1, .hero h1, .methodology-hero h1, .about-intro h1 {
         font-size: 2rem;
