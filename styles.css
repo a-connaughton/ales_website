@@ -1309,3 +1309,27 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
+/* ===================================
+   PROSE LINKS
+   Inline links inside body copy. Scoped to text blocks so nav,
+   cards, and buttons keep their own styling.
+   =================================== */
+
+.content-wrapper p a,
+.contact-section p a,
+.methodology-section p a,
+.about-section p a,
+.help-item h3 a {
+    color: var(--primary-color);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.content-wrapper p a:hover,
+.contact-section p a:hover,
+.methodology-section p a:hover,
+.about-section p a:hover,
+.help-item h3 a:hover {
+    color: var(--accent-color);
+}
