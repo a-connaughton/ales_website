@@ -4,27 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Survey Reports - American Local Elections Study</title>
-    <meta name="description" content="Survey reports from the American Local Elections Study will be posted here following initial research publications.">
+    <meta name="description" content="Post-election survey reports from the 2025 American Local Elections Study, covering 33 cities and counties that held local elections.">
     <link rel="canonical" href="https://localelectionssurveys.org/reports.html">
 
     <!-- Open Graph / social sharing -->
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="American Local Elections Study">
     <meta property="og:title" content="Survey Reports - American Local Elections Study">
-    <meta property="og:description" content="Survey reports from the American Local Elections Study will be posted here following initial research publications.">
+    <meta property="og:description" content="Post-election survey reports from the 2025 American Local Elections Study, covering 33 cities and counties that held local elections.">
     <meta property="og:url" content="https://localelectionssurveys.org/reports.html">
-    <meta property="og:image" content="https://localelectionssurveys.org/images/ales_2025_map.png">
+    <meta property="og:image" content="https://localelectionssurveys.org/images/ales_map.png">
     <meta property="og:image:alt" content="Map of American Local Elections Study survey locations">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Survey Reports - American Local Elections Study">
-    <meta name="twitter:description" content="Survey reports from the American Local Elections Study will be posted here following initial research publications.">
-    <meta name="twitter:image" content="https://localelectionssurveys.org/images/ales_2025_map.png">
+    <meta name="twitter:description" content="Post-election survey reports from the 2025 American Local Elections Study, covering 33 cities and counties that held local elections.">
+    <meta name="twitter:image" content="https://localelectionssurveys.org/images/ales_map.png">
 
     <link rel="icon" href="favicon.ico" sizes="any">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;700&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap" rel="stylesheet">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-D41MNYCBNN"></script>
     <script>
@@ -33,9 +34,110 @@
       gtag('js', new Date());
       gtag('config', 'G-D41MNYCBNN');
     </script>
+    <style>
+        .report-year {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            gap: 1rem;
+            margin: 3rem 0 1.2rem;
+        }
+
+        .report-year h1 {
+            margin: 0;
+            font-family: "Source Serif 4", Georgia, serif;
+            font-weight: 700;
+            font-size: 2rem;
+            color: var(--primary-color);
+        }
+
+        .reports-intro p {
+            font-family: "Public Sans", var(--font-main);
+            font-size: 1.02rem;
+            line-height: 1.65;
+            color: var(--text-color);
+            margin-bottom: 1rem;
+        }
+
+        .grid-rule {
+            border: none;
+            border-top: 1px solid var(--header-border);
+            margin: 1.8rem 0;
+        }
+
+        .report-year .year-note {
+            font-family: "Public Sans", var(--font-main);
+            font-size: 0.85rem;
+            color: var(--header-nav);
+        }
+
+        .report-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 0.9rem;
+            margin: 0 0 3rem;
+        }
+
+        .report-card {
+            display: flex;
+            flex-direction: column;
+            gap: 0.15rem;
+            padding: 0.95rem 1.05rem;
+            background: var(--white);
+            border: 1px solid var(--header-border);
+            border-radius: 8px;
+            text-decoration: none;
+            transition: border-color 0.15s, box-shadow 0.15s, transform 0.15s;
+        }
+
+        .report-filter {
+            width: 100%;
+            max-width: 330px;
+            font-family: "Public Sans", var(--font-main);
+            font-size: 0.9rem;
+            padding: 0.5rem 0.75rem;
+            border: 1px solid var(--header-border);
+            border-radius: 6px;
+            margin: 0 0 1.1rem;
+        }
+
+        .report-filter:focus {
+            outline: 2px solid var(--primary-color);
+            outline-offset: 1px;
+            border-color: var(--primary-color);
+        }
+
+        .report-card:hover {
+            border-color: var(--primary-color);
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+            transform: translateY(-2px);
+        }
+
+        .report-place {
+            font-family: "Public Sans", var(--font-main);
+            font-weight: 600;
+            font-size: 1.02rem;
+            color: var(--text-color);
+            line-height: 1.25;
+        }
+
+        .report-state {
+            font-family: "Public Sans", var(--font-main);
+            font-size: 0.78rem;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            color: var(--primary-color);
+        }
+
+        .report-n {
+            font-family: "Public Sans", var(--font-main);
+            font-size: 0.8rem;
+            color: var(--header-nav);
+            margin-top: 0.25rem;
+        }
+    </style>
 </head>
 <body>
-    <!-- Header & Navigation -->
     <header>
         <nav>
             <div class="logo">
@@ -69,37 +171,201 @@
         </nav>
     </header>
 
-    <!-- Main Content -->
     <main>
-        <section class="hero">
-            <h1>Survey Reports</h1>
-            <p>Summary reports from our nationwide surveys of voters in local elections.</p>
-        </section>
-
         <section>
             <div class="content-wrapper">
-                <div class="contact-section">
-                    <h2>Coming Soon</h2>
+                <div class="report-year">
+                    <h1>2025 Post-Election Reports</h1>
+                    <span class="year-note">Fielded November&ndash;December 2025</span>
+                </div>
+                <div class="reports-intro">
                     <p>
-                        Survey reports from the American Local Elections Study will be posted
-                        here following initial research publications.
+                        In 2025, the American Local Elections Study surveyed 5,517 adults in
+                        33 cities and counties holding local elections, along with a national
+                        sample of 2,346 adults. Each report below summarizes what respondents
+                        in one community said about their elected officials, local services,
+                        and the issues facing their area &mdash; from housing and policing to
+                        immigration and election timing.
                     </p>
                     <p>
-                        In the meantime, you can read our
-                        <a href="publications.html">scholarly papers</a>, review the
-                        <a href="methodology.html">study methodology</a>, or browse the
-                        <a href="codebook.html">codebook</a>.
+                        For details on sampling and weighting, see the
+                        <a href="methodology.html">study methodology</a>. Question-level
+                        documentation is available in the <a href="codebook.html">codebook</a>.
                     </p>
-                    <p>
-                        For questions about forthcoming reports or data access, please
-                        <a href="contact.html">get in touch</a>.
-                    </p>
+                </div>
+                <hr class="grid-rule">
+                <input class="report-filter" type="search" placeholder="Filter by place or state&hellip;" oninput="filterCards(this.value)">
+                <div class="report-grid">
+            <a class="report-card" href="reports/2025/albuquerque_2025.html">
+                <span class="report-place">Albuquerque</span>
+                <span class="report-state">New Mexico</span>
+                <span class="report-n">161 respondents</span>
+            </a>
+            <a class="report-card" href="reports/2025/atlanta_2025.html">
+                <span class="report-place">Atlanta</span>
+                <span class="report-state">Georgia</span>
+                <span class="report-n">190 respondents</span>
+            </a>
+            <a class="report-card" href="reports/2025/boston_2025.html">
+                <span class="report-place">Boston</span>
+                <span class="report-state">Massachusetts</span>
+                <span class="report-n">164 respondents</span>
+            </a>
+            <a class="report-card" href="reports/2025/bucks_county_2025.html">
+                <span class="report-place">Bucks County</span>
+                <span class="report-state">Pennsylvania</span>
+                <span class="report-n">153 respondents</span>
+            </a>
+            <a class="report-card" href="reports/2025/buffalo_2025.html">
+                <span class="report-place">Buffalo</span>
+                <span class="report-state">New York</span>
+                <span class="report-n">197 respondents</span>
+            </a>
+            <a class="report-card" href="reports/2025/charlotte_2025.html">
+                <span class="report-place">Charlotte</span>
+                <span class="report-state">North Carolina</span>
+                <span class="report-n">209 respondents</span>
+            </a>
+            <a class="report-card" href="reports/2025/chesapeake_2025.html">
+                <span class="report-place">Chesapeake</span>
+                <span class="report-state">Virginia</span>
+                <span class="report-n">96 respondents</span>
+            </a>
+            <a class="report-card" href="reports/2025/cincinnati_2025.html">
+                <span class="report-place">Cincinnati</span>
+                <span class="report-state">Ohio</span>
+                <span class="report-n">192 respondents</span>
+            </a>
+            <a class="report-card" href="reports/2025/cleveland_2025.html">
+                <span class="report-place">Cleveland</span>
+                <span class="report-state">Ohio</span>
+                <span class="report-n">214 respondents</span>
+            </a>
+            <a class="report-card" href="reports/2025/delaware_county_2025.html">
+                <span class="report-place">Delaware County</span>
+                <span class="report-state">Pennsylvania</span>
+                <span class="report-n">162 respondents</span>
+            </a>
+            <a class="report-card" href="reports/2025/detroit_2025.html">
+                <span class="report-place">Detroit</span>
+                <span class="report-state">Michigan</span>
+                <span class="report-n">235 respondents</span>
+            </a>
+            <a class="report-card" href="reports/2025/durham_2025.html">
+                <span class="report-place">Durham</span>
+                <span class="report-state">North Carolina</span>
+                <span class="report-n">115 respondents</span>
+            </a>
+            <a class="report-card" href="reports/2025/erie_county_2025.html">
+                <span class="report-place">Erie County</span>
+                <span class="report-state">Pennsylvania</span>
+                <span class="report-n">148 respondents</span>
+            </a>
+            <a class="report-card" href="reports/2025/greensboro_2025.html">
+                <span class="report-place">Greensboro</span>
+                <span class="report-state">North Carolina</span>
+                <span class="report-n">220 respondents</span>
+            </a>
+            <a class="report-card" href="reports/2025/hialeah_2025.html">
+                <span class="report-place">Hialeah</span>
+                <span class="report-state">Florida</span>
+                <span class="report-n">68 respondents</span>
+            </a>
+            <a class="report-card" href="reports/2025/hudson_county_2025.html">
+                <span class="report-place">Hudson County</span>
+                <span class="report-state">New Jersey</span>
+                <span class="report-n">159 respondents</span>
+            </a>
+            <a class="report-card" href="reports/2025/jersey_city_2025.html">
+                <span class="report-place">Jersey City</span>
+                <span class="report-state">New Jersey</span>
+                <span class="report-n">169 respondents</span>
+            </a>
+            <a class="report-card" href="reports/2025/kansas_city_2025.html">
+                <span class="report-place">Kansas City</span>
+                <span class="report-state">Kansas</span>
+                <span class="report-n">92 respondents</span>
+            </a>
+            <a class="report-card" href="reports/2025/king_county_2025.html">
+                <span class="report-place">King County</span>
+                <span class="report-state">Washington</span>
+                <span class="report-n">186 respondents</span>
+            </a>
+            <a class="report-card" href="reports/2025/lehigh_county_2025.html">
+                <span class="report-place">Lehigh County</span>
+                <span class="report-state">Pennsylvania</span>
+                <span class="report-n">161 respondents</span>
+            </a>
+            <a class="report-card" href="reports/2025/miami_2025.html">
+                <span class="report-place">Miami</span>
+                <span class="report-state">Florida</span>
+                <span class="report-n">93 respondents</span>
+            </a>
+            <a class="report-card" href="reports/2025/minneapolis_2025.html">
+                <span class="report-place">Minneapolis</span>
+                <span class="report-state">Minnesota</span>
+                <span class="report-n">188 respondents</span>
+            </a>
+            <a class="report-card" href="reports/2025/monmouth_county_2025.html">
+                <span class="report-place">Monmouth County</span>
+                <span class="report-state">New Jersey</span>
+                <span class="report-n">146 respondents</span>
+            </a>
+            <a class="report-card" href="reports/2025/nassau_county_2025.html">
+                <span class="report-place">Nassau County</span>
+                <span class="report-state">New York</span>
+                <span class="report-n">185 respondents</span>
+            </a>
+            <a class="report-card" href="reports/2025/new_orleans_2025.html">
+                <span class="report-place">New Orleans</span>
+                <span class="report-state">Louisiana</span>
+                <span class="report-n">173 respondents</span>
+            </a>
+            <a class="report-card" href="reports/2025/new_york_city_2025.html">
+                <span class="report-place">New York City</span>
+                <span class="report-state">New York</span>
+                <span class="report-n">223 respondents</span>
+            </a>
+            <a class="report-card" href="reports/2025/new_york_county_2025.html">
+                <span class="report-place">New York County</span>
+                <span class="report-state">New York</span>
+                <span class="report-n">171 respondents</span>
+            </a>
+            <a class="report-card" href="reports/2025/newport_news_2025.html">
+                <span class="report-place">Newport News</span>
+                <span class="report-state">Virginia</span>
+                <span class="report-n">129 respondents</span>
+            </a>
+            <a class="report-card" href="reports/2025/philadelphia_county_2025.html">
+                <span class="report-place">Philadelphia County</span>
+                <span class="report-state">Pennsylvania</span>
+                <span class="report-n">212 respondents</span>
+            </a>
+            <a class="report-card" href="reports/2025/pittsburgh_2025.html">
+                <span class="report-place">Pittsburgh</span>
+                <span class="report-state">Pennsylvania</span>
+                <span class="report-n">220 respondents</span>
+            </a>
+            <a class="report-card" href="reports/2025/seattle_2025.html">
+                <span class="report-place">Seattle</span>
+                <span class="report-state">Washington</span>
+                <span class="report-n">182 respondents</span>
+            </a>
+            <a class="report-card" href="reports/2025/st_paul_2025.html">
+                <span class="report-place">St. Paul</span>
+                <span class="report-state">Minnesota</span>
+                <span class="report-n">149 respondents</span>
+            </a>
+            <a class="report-card" href="reports/2025/virginia_beach_2025.html">
+                <span class="report-place">Virginia Beach</span>
+                <span class="report-state">Virginia</span>
+                <span class="report-n">155 respondents</span>
+            </a>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- Footer -->
     <footer>
         <div class="footer-content">
             <div class="funding-acknowledgment">
@@ -113,6 +379,13 @@
             <p class="footer-links"><a href="privacy.html">Privacy</a></p>
         </div>
     </footer>
-
+<script>
+    function filterCards(q) {
+        q = q.toLowerCase();
+        document.querySelectorAll(".report-card").forEach(function(c) {
+            c.style.display = c.textContent.toLowerCase().indexOf(q) >= 0 ? "" : "none";
+        });
+    }
+    </script>
 </body>
 </html>
