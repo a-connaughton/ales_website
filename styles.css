@@ -755,33 +755,41 @@ footer {
 .about-intro {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 60px 20px;
-    text-align: center;
+    padding: 60px 20px 0;
+    text-align: left;
 }
 
 .about-intro h1 {
-    font-family: var(--font-heading);
+    font-family: var(--font-main);
     font-size: 2.5rem;
     font-weight: 700;
-    line-height: 1.2;
-    color: var(--primary-color);
-    margin-bottom: 20px;
+    line-height: 1.08;
+    letter-spacing: -0.015em;
+    color: #0b0b0b;
+    text-wrap: balance;
+    max-width: 24ch;
+    margin-bottom: 0.8rem;
 }
 
 .about-intro p {
-    font-family: var(--font-main);
-    font-size: 1.2rem;
-    line-height: 1.8;
-    color: var(--text-color);
-    max-width: 900px;
-    margin: 0 auto;
+    font-family: var(--font-heading);
+    font-size: 1.15rem;
+    line-height: 1.65;
+    color: #52514e;
+    margin: 0;
+}
+
+.about-intro .rule {
+    border: 0;
+    border-top: 3px solid var(--primary-color);
+    margin: 2rem 0 0;
 }
 
 /* Team Section */
 .team-section {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 60px 20px;
+    padding: 45px 20px 60px;
 }
 
 .team-section h2 {
@@ -790,15 +798,17 @@ footer {
     font-weight: 700;
     line-height: 1.2;
     color: var(--primary-color);
-    margin-bottom: 50px;
+    margin-bottom: 35px;
     text-align: center;
 }
 
-/* Team Grid - 3 columns */
+/* Team Grid - three across, trailing row centred */
 .team-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 40px 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 45px 30px;
     margin-bottom: 60px;
 }
 
@@ -809,9 +819,17 @@ footer {
     align-items: center;
     text-align: center;
     position: relative;
+    flex: 1 1 290px;
+    max-width: 330px;
 }
 
 /* Headshot */
+.team-grid .headshot-wrapper {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 16px;
+}
+
 .headshot-wrapper {
     width: 200px;
     height: 200px;
@@ -840,7 +858,7 @@ footer {
 /* Member Info */
 .member-name {
     font-family: var(--font-heading);
-    font-size: 1.3rem;
+    font-size: 1.15rem;
     font-weight: 700;
     color: #000000;
     margin: 0 0 8px 0;
@@ -849,11 +867,11 @@ footer {
 
 .member-affiliation {
     font-family: var(--font-main);
-    font-size: 1rem;
+    font-size: 0.92rem;
     color: var(--text-color);
-    margin: 0 0 15px 0;
-    padding-bottom: 15px;
-    border-bottom: 3px solid #333333;
+    margin: 0 0 12px 0;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #333333;
     width: 100%;
 }
 
@@ -874,8 +892,8 @@ footer {
 
 .member-bio p {
     font-family: var(--font-main);
-    font-size: 0.95rem;
-    line-height: 1.8;
+    font-size: 0.9rem;
+    line-height: 1.7;
     color: var(--text-color);
     margin: 0;
     text-align: left;
@@ -892,6 +910,42 @@ footer {
 .about-section a:hover {
     color: var(--primary-color);
     text-decoration: underline;
+}
+
+/* Closing band */
+.about-band {
+    background: #f0efeb;
+    border-top: 1px solid #cfc8c0;
+    padding: var(--spacing-lg) var(--spacing-md);
+    margin-top: var(--spacing-md);
+}
+
+.about-band-grid {
+    max-width: 1160px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2.5rem 3.5rem;
+}
+
+.about-band h2 {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    color: var(--primary-color);
+    margin-bottom: 0.8rem;
+}
+
+.about-band p {
+    color: #52514e;
+    line-height: 1.75;
+}
+
+.about-band p + p {
+    margin-top: 0.9rem;
+}
+
+.about-band a {
+    color: var(--primary-color);
 }
 
 /* ===================================
@@ -1426,11 +1480,6 @@ footer {
    =================================== */
 
 @media (max-width: 1024px) {
-    .team-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 35px 25px;
-    }
-    
     .headshot-wrapper {
         width: 180px;
         height: 180px;
@@ -1465,7 +1514,7 @@ footer {
     
     /* About Page */
     .about-intro {
-        padding: 40px 20px;
+        padding: 40px 20px 0;
     }
     
     .team-section {
@@ -1473,17 +1522,25 @@ footer {
     }
     
     .team-grid {
+        gap: 35px 20px;
+    }
+
+    .team-member {
+        flex: 1 1 240px;
+    }
+
+    .team-grid .headshot-wrapper {
+        width: 130px;
+        height: 130px;
+    }
+
+    .about-band-grid {
         grid-template-columns: 1fr;
-        gap: 30px 20px;
     }
     
     .headshot-wrapper {
         width: 160px;
         height: 160px;
-    }
-    
-    .member-name {
-        font-size: 1.2rem;
     }
     
     .member-affiliation {
@@ -1537,6 +1594,11 @@ footer {
     .headshot-wrapper {
         width: 200px;
         height: 200px;
+    }
+    
+    .team-grid .headshot-wrapper {
+        width: 160px;
+        height: 160px;
     }
     
     .stats-grid {
