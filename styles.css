@@ -187,33 +187,140 @@ nav {
     display: block;
 }
 
+/* Hamburger, phone only */
+.nav-toggle {
+    display: none;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     nav {
-        flex-direction: column;
-        gap: 1rem;
+        flex-direction: row;
+        gap: 0;
+        padding: 0 1rem;
     }
-    
-    .nav-links {
-        gap: 1rem;
-        flex-wrap: wrap;
+
+    .nav-toggle {
+        display: flex;
+        align-items: center;
         justify-content: center;
+        width: 44px;
+        height: 44px;
+        margin-right: -0.6rem;
+        padding: 0;
+        background: none;
+        border: 0;
+        color: var(--header-nav-hover);
+        cursor: pointer;
+    }
+
+    .nav-toggle-bars,
+    .nav-toggle-bars::before,
+    .nav-toggle-bars::after {
+        display: block;
+        width: 22px;
+        height: 2px;
+        border-radius: 2px;
+        background: currentColor;
+        transition: transform 0.25s ease, background 0.15s ease;
+    }
+
+    .nav-toggle-bars {
+        position: relative;
+    }
+
+    .nav-toggle-bars::before,
+    .nav-toggle-bars::after {
+        content: "";
+        position: absolute;
+        left: 0;
+    }
+
+    .nav-toggle-bars::before { top: -7px; }
+    .nav-toggle-bars::after { top: 7px; }
+
+    .nav-toggle[aria-expanded="true"] .nav-toggle-bars {
+        background: transparent;
+    }
+
+    .nav-toggle[aria-expanded="true"] .nav-toggle-bars::before {
+        transform: translateY(7px) rotate(45deg);
+    }
+
+    .nav-toggle[aria-expanded="true"] .nav-toggle-bars::after {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+
+    /* the menu drops out of the header rather than pushing it open */
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 0 1rem 0.75rem;
+        background: var(--header-bg);
+        border-bottom: 1px solid var(--header-border);
+        box-shadow: 0 10px 24px rgba(0, 0, 0, 0.10);
+        max-height: calc(100vh - 4.5rem);
+        overflow-y: auto;
+    }
+
+    .nav-links.is-open {
+        display: flex;
+    }
+
+    .nav-links > li {
+        border-top: 1px solid var(--header-border);
+    }
+
+    .nav-links > li:first-child {
+        border-top: 0;
+    }
+
+    .nav-links > li > a {
+        padding: 0.85rem 0.25rem;
+        font-size: 1rem;
+        color: var(--header-nav-hover);
+    }
+
+    /* Data and Research label the pages under them; they are not links */
+    .dropdown {
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+
+    .dropdown > a {
+        pointer-events: none;
+        padding: 0.85rem 0.25rem 0.1rem;
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--header-nav);
+    }
+
+    .caret {
+        display: none;
     }
 
     .dropdown-menu {
         position: static;
         box-shadow: none;
         border-top: none;
-        padding: 0;
+        padding: 0 0 0.55rem;
         min-width: unset;
         display: block;
         background-color: transparent;
     }
 
     .dropdown-menu li a {
-        color: var(--header-nav);
-        padding: 0.3rem 0.5rem;
-        font-size: 0.85rem;
+        color: var(--header-nav-hover);
+        padding: 0.55rem 0.25rem 0.55rem 0.9rem;
+        font-size: 1rem;
     }
 
     .dropdown-menu li a:hover {
